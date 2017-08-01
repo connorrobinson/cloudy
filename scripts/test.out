@@ -1,0 +1,53 @@
+                                                          Cloudy 17.00
+                                                         www.nublado.org
+
+                       **************************************17Jun01**************************************
+                       *                                                                                 *
+                       * Set save prefix "test"                                                          *
+                       * Hden 10.3                                                                       *
+                       * Abundances ISM                                                                  *
+                       * >>>> mie_read_opc reading file -- graphite_ism_10.opc                      <<<< *
+                       * >>>> mie_read_opc reading file -- silicate_ism_10.opc                      <<<< *
+                       * table SED "teff4400_logg4.0_meta0_cloudy.dat"                                   *
+                       * Q(H) 5.4                                                                        *
+                       * Radius 8                                                                        *
+                       * stop zone 1                                                                     *
+                       * set dr 0                                                                        *
+                       * Cosmic rays background                                                          *
+                       * Save overview ".ovr" last no hash                                               *
+                       * Save emitted continuum ".econ" last no hash                                     *
+                       * Save element hydrogen ".hyd" last no hash                                       *
+                       *                                                                                 *
+                       ***********************************************************************************
+
+
+
+ NOTE Setcon: continuum has zero intensity starting at  2.4072e+01 Ryd.
+  1387 cells in the incident continuum have zero intensity.  Problems???
+
+           !The plasma frequency is 4.22e-07 Ryd.  The incident continuum is set to 0 below this.
+
+ >>>
+ >>> NOTE The incident continuum is surprisingly faint.
+ >>> The total energy in the Balmer and Lyman continua is 2.07e-22 erg cm-2 s-1.
+ >>> This is many orders of magnitude fainter than the ISM galactic background.
+ >>> This seems unphysical - please check that the continuum intensity has been properly set.
+ >>> YOU MAY BE MAKING A BIG MISTAKE!!
+ >>>
+
+
+
+           8228CellPeak1.00E+00   Lo 3.04e-09=  29.98m   Hi-Con:7.13E+06 Ryd   E(hi):7.35E+06Ryd     E(hi):     100.00 MeV
+           L(nu>1ryd):  -4.7409   Average nu:3.316E+00   L( X-ray):  -6.0484   L(BalC):  -5.1015     Q(Balmer C):   5.8956
+           Q(1.0-1.8):   5.0687   Q(1.8-4.0):   4.9001   Q(4.0-20):   4.7222   Q(20--):   3.2668     Ion pht flx:1.999E-12
+           L(gam ray):   0.0000   Q(gam ray):   0.0000   L(Infred):  -3.9827   Alf(ox):   0.0000     Total lumin:  -3.8856
+           log L/Lsun: -37.4685   Abs bol mg:  98.4139   Abs V mag: -38.0000   Bol cor: 136.4139     nuFnu(Bbet):  -5.2434
+           U(1.0----):3.342E-33   U(4.0----):7.263E-34   T(En-Den):4.623E-05   T(Comp):5.305E+04     nuJnu(912A):4.544E-23
+           Occ(FarIR):0.000E+00   Occ(H n=6):3.536E-33   Occ(1Ryd):2.096E-39   Occ(4R):8.126E-42     Occ (Nu-hi):0.000E+00
+           Tbr(FarIR):0.000E+00   Tbr(H n=6):1.549E-29   Tbr(1Ryd):3.309E-34   Tbr(4R):5.140E-36     Tbr (Nu-hi):0.000E+00
+  
+ PROBLEM DISASTER - the kinetic temperature appears to be below the lower limit of the code, 2.800e+00K.  It does not bracket thermal balance.
+ This calculation is aborting.
+ Sorry.
+ Cloudy ends: 0 zone, 1 iteration, ABORT DISASTER PROBLEM, 1 warning. (single thread) ExecTime(s) 87.14
+ [Stop in cdMain at maincl.cpp:517, something went wrong]
