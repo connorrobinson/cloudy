@@ -11,6 +11,8 @@ Converts nextgen photosphere spectra into something cloudy can use
 
 '''
 
+#This is a comment
+
 path = '/Users/Connor/Desktop/Research/cloudy/Project/data/'
 photfile = 'teff4400_logg4.0_meta0.dat'
 SEDpath = '/Users/Connor/Desktop/Research/cloudy/c17.00/data/SED/'
