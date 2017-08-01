@@ -1,13 +1,14 @@
 #Will add this prefix to all the output save file
 Set save prefix "test"
-Hden 10.3
+Hden 10.5
 Abundances ISM
 #Specifies the shape of SED
-table SED "teff4400_logg4.0_meta0_cloudy.dat"
+#table SED "teff10000_logg4.0_meta0_cloudy.dat"
+Blackbody 4400 K
 #Specifies the luminosity in ionizing photons
-Q(H) 45
+Q(H) 30.5
 #Gives distance away from the star (Units: log of centimeters)
-Radius 8
+Radius 12.6
 #Specifies that we're going going to only being doing one zone
 stop zone 1
 #Sets the zone thickness. In units of log(cm) so this is 1cm thick.

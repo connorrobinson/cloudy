@@ -1,10 +1,11 @@
 import numpy as np
 import matplotlib.pyplot as plt
-
+import make_phot as m
+import pdb
 '''
 params.py
 
-PURPOSE:
+PURPOSE
     Calculate some basic parameters to use as inputs into cloudy
 
 '''
@@ -16,8 +17,18 @@ k = 1.38e-23
 
 #Set up stellar/disk parameter
 r = np.linspace(0,1,100)*AU 
-M = 1.1 * 2e30
-R = 1.7 * 6.96e8
+
+#Stellar parameters for GM Aur
+#M = 1.1 * 2e30
+#R = 1.7 * 6.96e8
+
+#Due to difficulties having enough ionizing photons, going to try with vega instead
+#Trying with an A0 star instead (Vega)
+M = 2.135 * 2e30
+R = 2.818 * 6.96e8
+
+#Calculate surface gravity
+logg = np.log10(G * M/R**2 * 1e2)
 
 #These can be solved for later, but assume reasonable things 
 Rwall = .3 * AU
@@ -41,10 +52,18 @@ rho0 = 1/np.sqrt(2*np.pi)*Sigma/h
 n0 = rho0/(mu * mh)/1e6
 
 #Load in the spectrum and scale it to the size of the star
-path = '/Users/Connor/Desktop/Research/cloudy/Project/data/'
-photfile = 'teff4400_logg4.0_meta0_cloudy.dat'
+nextgenpath = '/Users/Connor/Desktop/Research/cloudy/Project/data/'
+nextgenfile = 'teff10000_logg4.0_meta0.dat'
 
-data = np.genfromtxt(path+photfile, usecols = [0,1])
+SEDpath = '/Users/Connor/Desktop/Research/cloudy/c17.00/data/SED/'
+SEDfile = 'teff10000_logg4.0_meta0_cloudy.dat'
+
+
+
+#Convert the SED from nextgen format to cloudy
+m.make(nextgenpath+nextgenfile, SEDpath, SEDfile)
+
+data = np.genfromtxt(SEDpath+SEDfile, usecols = [0,1])
 energy = data[:,0]
 
 ergstoryd = 4.587425e10
