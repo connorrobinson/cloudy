@@ -34,13 +34,11 @@ mu = (3/4 * .1 + 2 * .9)**-1
 
 cs = np.sqrt(k*Twall/(mu*mh))
 
-
 h = cs/omega
 
 rho0 = 1/np.sqrt(2*np.pi)*Sigma/h
 
 n0 = rho0/(mu * mh)/1e6
-
 
 #Load in the spectrum and scale it to the size of the star
 path = '/Users/Connor/Desktop/Research/cloudy/Project/data/'
@@ -48,11 +46,14 @@ photfile = 'teff4400_logg4.0_meta0_cloudy.dat'
 
 data = np.genfromtxt(path+photfile, usecols = [0,1])
 energy = data[:,0]
-flux = data[:,1] * 4*np.pi*R**2
+
+ergstoryd = 4.587425e10
+
+flux = data[:,1]  * ergstoryd
 
 H_ionize = energy > 1
 
-Q_H = np.sum(flux[H_ionize]/(energy[H_ionize]))
+Q_H = 4*np.pi*R**2 * np.sum(flux[H_ionize]/(energy[H_ionize]))
 
 #flux[H_ionize]
 
