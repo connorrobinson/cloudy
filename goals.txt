@@ -1,0 +1,9 @@
+GOALS FOR MODELS:
+
+List of densities (which is a proxy for height above the midplane) as input to cloudy
+Solve equations of radiative transfer at each height
+
+Decide on a stopping criteria (perhaps tau = 5 at 10 μm?)
+
+Produce a SED of verticle cut of the wall
+
