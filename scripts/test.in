@@ -6,15 +6,21 @@ Abundances ISM
 #table SED "teff10000_logg4.0_meta0_cloudy.dat"
 Blackbody 4400 K
 #Specifies the luminosity in ionizing photons
-Q(H) 30.5
+Q(H) 33.97
 #Gives distance away from the star (Units: log of centimeters)
-Radius 12.6
+Radius 12.6 vary
+grid 10 14 0.4 log
+#Radius 12.6
+iterate to convergence
 #Specifies that we're going going to only being doing one zone
 stop zone 1
 #Sets the zone thickness. In units of log(cm) so this is 1cm thick.
 set dr 0
+grains ISM function sublimation
 Cosmic rays background
 #
+save grain abundance ".grn" no hash
+save grain D/G ".d2g" no hash
 Save overview ".ovr" last no hash
 Save emitted continuum ".econ" last no hash
 Save element hydrogen ".hyd" last no hash
