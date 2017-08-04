@@ -1,24 +1,26 @@
 #Will add this prefix to all the output save file
 Set save prefix "test"
-Hden 10.5
-Abundances ISM
+Hden 10.5 vary
+grid list "densities.dat"
+stop temperature 1000 K
+#Abundances ISM
 #Specifies the shape of SED
-#table SED "teff10000_logg4.0_meta0_cloudy.dat"
 Blackbody 4400 K
+#table star "atlas_3d_odfnew.mod" 4400 K 4.0 logg 0.0 logz
 #Specifies the luminosity in ionizing photons
-Q(H) 33.97
-#Gives distance away from the star (Units: log of centimeters)
-Radius 12.6 vary
-grid 10 14 0.4 log
-#Radius 12.6
+Q(H) 33.20
+#Gives distance away from the star (Units: log(cm))
+Radius 12
+#Radius 14 vary
+#grid 11 16 1.0 log
 iterate to convergence
 #Specifies that we're going going to only being doing one zone
-stop zone 1
 #Sets the zone thickness. In units of log(cm) so this is 1cm thick.
-set dr 0
+#set dr 0
 grains ISM function sublimation
 Cosmic rays background
 #
+save grid ".grd" last no hash
 save grain abundance ".grn" no hash
 save grain D/G ".d2g" no hash
 Save overview ".ovr" last no hash

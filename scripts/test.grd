@@ -1,0 +1,41 @@
+#Index	Failure?	Warnings?	Exit code	#rank	#seq	HDEN=%f L	grid parameter string
+000000000	F	T	            warnings	0	18	10.531537	10.531537
+000000001	F	T	            warnings	0	3	10.514165	10.514165
+000000002	F	T	            warnings	0	6	10.462049	10.462049
+000000003	F	T	            warnings	1	5	10.375191	10.375191
+000000004	F	T	            warnings	0	8	10.253589	10.253589
+000000005	F	T	            warnings	1	13	10.097242	10.097242
+000000006	F	T	            warnings	1	9	9.906153	9.906153
+000000007	F	T	            warnings	0	1	9.680320	9.680320
+000000008	F	T	            warnings	1	15	9.419744	9.419744
+000000009	F	T	            warnings	1	2	9.124423	9.124423
+000000010	F	T	            warnings	1	6	8.794359	8.794359
+000000011	F	T	            warnings	0	9	8.429552	8.429552
+000000012	T	T	   early termination	0	14	8.030001	8.030001
+000000013	T	T	   early termination	1	19	7.595706	7.595706
+000000014	T	T	   early termination	0	5	7.126668	7.126668
+000000015	T	T	   early termination	0	13	6.622887	6.622887
+000000016	T	T	   early termination	1	4	6.084362	6.084362
+000000017	T	T	   early termination	1	16	5.511093	5.511093
+000000018	T	T	   early termination	1	12	4.903080	4.903080
+000000019	T	T	   early termination	1	11	4.260324	4.260324
+000000020	T	T	   early termination	0	12	3.582825	3.582825
+000000021	T	T	   early termination	0	15	2.870582	2.870582
+000000022	T	T	   early termination	1	14	2.123596	2.123596
+000000023	T	T	   early termination	1	18	1.341866	1.341866
+000000024	T	T	   early termination	0	4	0.525392	0.525392
+000000025	T	T	   early termination	0	17	-0.325825	-0.325825
+000000026	T	T	   early termination	0	19	-1.211786	-1.211786
+000000027	T	T	   early termination	1	8	-2.132490	-2.132490
+000000028	T	F	   early termination	0	0	-3.087938	-3.087938
+000000029	T	T	   early termination	0	11	-4.078129	-4.078129
+000000030	T	T	   early termination	0	16	-5.103065	-5.103065
+000000031	T	T	   early termination	0	7	-6.162743	-6.162743
+000000032	T	F	   early termination	1	0	-7.257165	-7.257165
+000000033	T	T	   early termination	1	17	-8.386331	-8.386331
+000000034	T	T	   early termination	1	7	-9.550240	-9.550240
+000000035	T	T	   early termination	1	10	-10.748893	-10.748893
+000000036	T	F	   early termination	1	1	-11.982289	-11.982289
+000000037	T	T	   early termination	0	10	-13.250429	-13.250429
+000000038	T	T	   early termination	1	3	-14.553312	-14.553312
+000000039	T	T	   early termination	0	2	-15.890940	-15.890940

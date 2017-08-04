@@ -49,8 +49,6 @@ def bbstar_to_Q(T, R):
     
     
     
-    
-    
 def make(photfile, SEDpath, SEDfile):
     '''
     

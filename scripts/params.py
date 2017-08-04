@@ -51,28 +51,36 @@ rho0 = 1/np.sqrt(2*np.pi)*Sigma/h
 
 n0 = rho0/(mu * mh)/1e6
 
+n_z = n0 * np.exp(-(np.arange(40)/5)**2)
+
+#np.savetxt('densities.dat', np.reshape(n_z,[4,1]))
+denfile = open('densities.dat', 'w')
+for n in n_z:
+    denfile.write(str(np.log10(n))+'  ')
+denfile.close()
+
 #Load in the spectrum and scale it to the size of the star
-nextgenpath = '/Users/Connor/Desktop/Research/cloudy/Project/data/'
-nextgenfile = 'teff10000_logg4.0_meta0.dat'
-
-SEDpath = '/Users/Connor/Desktop/Research/cloudy/c17.00/data/SED/'
-SEDfile = 'teff10000_logg4.0_meta0_cloudy.dat'
-
-
-
-#Convert the SED from nextgen format to cloudy
-m.make(nextgenpath+nextgenfile, SEDpath, SEDfile)
-
-data = np.genfromtxt(SEDpath+SEDfile, usecols = [0,1])
-energy = data[:,0]
-
-ergstoryd = 4.587425e10
-
-flux = data[:,1]  * ergstoryd
-
-H_ionize = energy > 1
-
-Q_H = 4*np.pi*R**2 * np.sum(flux[H_ionize]/(energy[H_ionize]))
+# nextgenpath = '/Users/Connor/Desktop/Research/cloudy/Project/data/'
+# nextgenfile = 'teff10000_logg4.0_meta0.dat'
+#
+# SEDpath = '/Users/Connor/Desktop/Research/cloudy/c17.00/data/SED/'
+# SEDfile = 'teff10000_logg4.0_meta0_cloudy.dat'
+#
+#
+#
+# #Convert the SED from nextgen format to cloudy
+# m.make(nextgenpath+nextgenfile, SEDpath, SEDfile)
+#
+# data = np.genfromtxt(SEDpath+SEDfile, usecols = [0,1])
+# energy = data[:,0]
+#
+# ergstoryd = 4.587425e10
+#
+# flux = data[:,1]  * ergstoryd
+#
+# H_ionize = energy > 1
+#
+# Q_H = 4*np.pi*R**2 * np.sum(flux[H_ionize]/(energy[H_ionize]))
 
 #flux[H_ionize]
 

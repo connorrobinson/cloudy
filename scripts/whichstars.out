@@ -1,0 +1,14 @@
+                                                          Cloudy 17.00
+                                                         www.nublado.org
+
+                       **************************************17Jun01**************************************
+                       *                                                                                 *
+                       * table star available                                                            *
+
+ I will now list all stellar atmosphere grids that are ready to be used (if any).
+ User-defined stellar atmosphere grids will not be included in this list.
+
+   table HM05 <z> [ <factor> ]
+   table HM05 quasar <z> [ <factor> ]
+   table HM12 <z> [ <factor> ]
+ [Stop in ParseTable at parse_table.cpp:1064, Cloudy exited OK]
